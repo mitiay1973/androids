@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CBD3FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/GeografPosition"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BaseName" />
+
+    <TextView
+        android:id="@+id/NumberOfParts"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GeografPosition" />
+
+    <TextView
+        android:id="@+id/BaseId"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="185dp"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BaseName"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BaseId" />
+
+    <Button
+        android:id="@+id/Click"
+        android:layout_width="223dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:background="#A80F0F"
+        android:backgroundTint="#A80F0F"
+        android:onClick="GetTextFromSql"
+        android:shadowColor="@color/white"
+        android:text="Получить данные"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NumberOfParts"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/NextList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="GetTextFromSql"
+        android:text="След данные"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/BackList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="GetTextFromSql"
+        android:text="Пред данные"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/NextList"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/addData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Добавить данные"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Click"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/IzmData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="15dp"
+        android:text="Изменить данные"
+        app:layout_constraintBottom_toTopOf="@+id/BackList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/delData"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/delData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Удалить запись"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addData"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="44dp"
+        android:text="Номер базы"
+        app:layout_constraintEnd_toStartOf="@+id/BaseId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="40dp"
+        android:text="Имя базы"
+        app:layout_constraintEnd_toStartOf="@+id/BaseName"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="220dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="125dp"
+        android:text="Географическое положение"
+        app:layout_constraintEnd_toEndOf="@+id/GeografPosition"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="146dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="18dp"
+        android:text="Количество частей"
+        app:layout_constraintEnd_toStartOf="@+id/NumberOfParts"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
